@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{% static 'chatbot/chat_style.css' %}">
+</head>
+<body>
+    <div id="chat-container"></div>
+
+    <form id="chat-form">  
+        {% csrf_token %}
+        <input type="text" id="user-input" name="user_input">
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="{% static 'chatbot/chat_script.js' %}"></script>
+</body>
+</html>
